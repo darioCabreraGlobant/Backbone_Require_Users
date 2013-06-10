@@ -5,10 +5,10 @@ define([
   // Pull in the Collection module from above
   'collections/users',
   'text!templates/users/edit.html'
-], function($, _, Backbone, UsersCollection, projectsListTemplate){
+], function($, _, Backbone, UsersCollection, usersEditTemplate){
   var UsersEditView = Backbone.View.extend({
     tagName:  'div',
-    template: _.template($.get('/templates/users/edit.html').html()),
+    template: _.template(usersEditTemplate),
     events: {
       'submit .edit-user-form': 'saveUser'
     },
